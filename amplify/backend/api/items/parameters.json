@@ -1,0 +1,12 @@
+{
+  "AppSyncApiName": "items",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthModeLastUpdated": "2024-01-17T19:01:30.298Z",
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authmangoawsapp5bf2d540",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

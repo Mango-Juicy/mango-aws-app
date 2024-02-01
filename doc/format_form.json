@@ -1,0 +1,40 @@
+[
+  [
+    {
+      "label": "Name",
+      "key": "name"
+    },
+    {
+      "label": "Tag",
+      "key": "tag"
+    },
+    {
+      "label": "category",
+      "key": "category"
+    }
+  ],
+  [
+    {
+      "label": "description",
+      "key": "description"
+    }
+  ],
+  [
+    {
+      "label": "value",
+      "key": "value"
+    },
+    {
+      "label": "user",
+      "key": "user"
+    },
+    {
+      "label": "date",
+      "key": "date"
+    },
+    {
+      "label": "note",
+      "key": "note"
+    }
+  ]
+]

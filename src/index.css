@@ -1,0 +1,205 @@
+:root {
+  /* colors */
+  --primary-color: #121212; /* Non usato */
+  --background-color: #171324;
+  --accent-d-color: #241e42;
+  --accent-color: #5a4fcf;
+  --accent-l-color: #322a62;
+
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  /* color: rgba(255, 255, 255, 0.87); */
+  background-color: var(--background-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* start custom */
+
+/* Nice floating label  */
+.form-floating label {
+  color: #f0f0f0c2 !important;
+}
+.form-floating .form-control-plaintext + label::after {
+  background-color: inherit !important;
+}
+.form-floating .form-control:focus + label::after {
+  background-color: inherit;
+}
+.form-floating .form-control:not(:placeholder-shown) + label::after {
+  background-color: inherit;
+}
+.form-floating .form-select + label::after {
+  background-color: inherit;
+}
+
+/* Nice scrollbar for grid */
+.table {
+  --bs-table-color: none !important;
+  --bs-table-bg: none !important;
+  --bs-table-bg: none !important;
+}
+.table-responsive {
+  max-height: 50vh; /* Regola l'altezza massima del contenitore scrollabile */
+  overflow-y: auto; /* Abilita la scrollbar verticale quando necessario */ 
+}
+.table-responsive thead {
+  position: sticky;
+  top: 0;
+  /* background-color: var(--accent-d-color);  */
+  z-index: 1;
+}
+.table-responsive::-webkit-scrollbar {
+  height: 8px; 
+  width: 8px; 
+}
+.table-responsive::-webkit-scrollbar-thumb {
+  background-color: #343a40; 
+  border-radius: 10px; 
+}
+.table-responsive::-webkit-scrollbar-track {
+  background-color: #f8f9fa81; 
+  border-radius: 10px;
+}
+.table-responsive::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+
+
+
+/* ButtonC TODO: colors hover */
+.btn-c-primary {
+  background-color: var(--accent-color);
+  color: white;
+}
+.btn-c-primary:hover {
+  background-color: var(--accent-l-color);
+  color: white;
+}
+
+.btn-c-background {
+  background-color: var(--accent-l-color);
+  color: white;
+}
+.btn-c-background:hover {
+  background-color: var(--background-color);
+  color: white;
+}
+
+/* SectionTabs */
+.btn-c-tab {
+  background-color: var(--accent-l-color);
+  color: white;
+}
+.btn-c-tab:hover {
+  background-color: var(--accent-l-color);
+  color: white;
+}
+
+.btn-c-tab-selected {
+  background-color: var(--accent-d-color);
+  color: white;
+}
+.btn-c-tab-selected:hover {
+  background-color: var(--accent-d-color);
+  color: white;
+}
+
+/* .modal-c {
+  max-width: 60%;  Imposta la larghezza massima desiderata (rovina su mobile)
+} */
+
+
+/* COLORS */
+.c-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.c-background {
+  background-color: var(--background-color) !important;
+}
+
+.c-accent {
+  background-color: var(--accent-color) !important;
+}
+
+.c-accent-l {
+  background-color: var(--accent-l-color) !important;
+}
+
+.c-accent-d {
+  background-color: var(--accent-d-color) !important;
+}
+
+.c-transparent{
+  background-color: inherit !important;
+}
+/* end custom */
+
+
+
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  /* display: flex; */
+  /* place-items: center;
+  min-width: 320px;
+  min-height: 100vh; */
+  /* custom */
+  background-color: var(--background-color);
+  color: white;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

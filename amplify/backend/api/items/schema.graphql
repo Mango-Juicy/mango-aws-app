@@ -1,0 +1,42 @@
+type Project
+  @model
+  @auth(
+    rules: [
+      # Admins can do any actions
+      { allow: groups, groups: ["Admins"]}
+      # Team Members can read their Projects
+      { allow: owner, ownerField: "teamMembers", operations: [read] }
+    ]
+  )  {
+  id: ID!
+  name: String!
+  description: String
+  category: String
+  date: String
+  note: String
+  teamMembers: [String]
+  items: [Items] @hasMany
+}
+
+type Items
+  @model
+  @auth(
+    rules: [
+      # Admins can do any actions
+      { allow: groups, groups: ["Admins"]}
+      # Owners can do any actions on their Items
+      { allow: owner }
+      # Team Members can read Items in their Project
+      { allow: owner, ownerField: "teamMembers", operations: [read] }
+    ]
+  )  {
+  id: ID!
+  name: String!
+  description: String
+  tag: String
+  category: String
+  value: Int
+  date: String
+  note: String
+  teamMembers: [String]
+}
